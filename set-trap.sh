@@ -3,12 +3,11 @@
 # Instead of VALIDATE function using set and trap functions for validating or finding error's in shell script
 
 set -e 
- FAILURE(){
+ failure (){
     echo "failed at : $1 $2 "
 
  }
-
-trap 'FAILURE "${LINENO}" "$(BASH_COMMAND)"' ERR
+trap 'failure "${LINENO}" "$(BASH_COMMAND)"' ERR
 
 
 START_TIME=$(date +%s)  # here declearing start time 
