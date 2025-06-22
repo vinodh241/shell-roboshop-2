@@ -28,9 +28,9 @@ check_root(){
     VALIDATE(){
         if [ $1 -eq 0 ]
         then
-           echo -e "$G Installing $2 is ..... SUCCESS $N"
+           echo -e "$2 is .....$G SUCCESS $N"
         else
-           echo -e "$R Installing $2 is ..... FAILURE $N"
+           echo -e "$2 is .....$R FAILURE $N"
            exit 1 
         fi           
 }
