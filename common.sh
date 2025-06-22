@@ -100,3 +100,15 @@ print_time(){
 }
 
 
+mavne_setup(){
+
+   dnf install maven -y &>>$LOG_FILE
+   VALIDATE $? "Installing Maven"
+      
+   mvn clean package  &>>$LOG_FILE
+   VALIDATE $? "packaging shipping app"
+
+   mv target/shipping-1.0.jar shipping.jar  &>>$LOG_FILE
+   VALIDATE $? "copying the jas files"
+}
+
