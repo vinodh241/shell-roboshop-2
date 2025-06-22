@@ -112,3 +112,14 @@ mavne_setup(){
    VALIDATE $? "copying the jas files"
 }
 
+python_setup() {
+
+
+   
+dnf install python3 gcc python3-devel -y &>>$LOG_FILE
+VALIDATE $? "installing python"
+
+pip3 install -r requirements.txt &>>$LOG_FILE
+VALIDATE $? " installing python dependencies"
+}
+
