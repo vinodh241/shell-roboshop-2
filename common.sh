@@ -12,6 +12,8 @@ SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE=$LOGS_FOLDER/$SCRIPT_NAME.log
 SCRIPT_DIR=$PWD
 
+mkdir -p $LOGS_FOLDER
+
 check_root(){
       if [ $USERID -ne 0 ]
       then
