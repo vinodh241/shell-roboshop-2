@@ -1,7 +1,10 @@
 #!/bin/bash
 
-source./common.sh
+
+source ./common.sh
+
 app_name=mysql
+
 check_root
 
 echo "Please enter thw mysql root password"
